@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PhotoSwipe</title>
+	<meta name="author" content="Ste Brennan - Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	
+	<link href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+	<link href="css/jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="js/jquery.touch-gallery-1.0.0.js"></script>
+	<script type="text/javascript" src="js/jquery.touch-gallery-1.0.0.min.js"></script>
+	
+
+	
+</head>
+
+<body>
+<div data-role="page" data-add-back-btn="true" id="Gallery2" class="gallery-page">
+
+	<div data-role="header">
+		<h1>Second Gallery</h1>
+	</div>
+
+	<div data-role="content">	
+		<div id="gallery">
+   <img src="images/thumb/010.jpg" data-large="images/full/010.jpg" />
+    <img src="images/thumb/010.jpg" data-large="images/full/010.jpg" />
+    <img src="images/thumb/010.jpg"  data-large="images/full/010.jpg" />
+    
+    <script>
+      $('img[data-large]').touchGallery({
+        getSource: function() { 
+          return $(this).attr('data-large');
+        }
+      });
+    </script>
+	
+</div>
+</div>
+</div>
+</body>
+</html>
